@@ -9,5 +9,6 @@ namespace BuyPlus_E_CommerceApp.Data
         {
             
         }
+        public DbSet<Category> Categories { get; set; }
     }
 }
