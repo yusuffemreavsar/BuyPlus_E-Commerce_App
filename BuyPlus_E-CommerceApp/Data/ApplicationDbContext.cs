@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BuyPlus_E_CommerceApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BuyPlus_E_CommerceApp.Data
 {
@@ -8,6 +9,5 @@ namespace BuyPlus_E_CommerceApp.Data
         {
             
         }
-
     }
 }
