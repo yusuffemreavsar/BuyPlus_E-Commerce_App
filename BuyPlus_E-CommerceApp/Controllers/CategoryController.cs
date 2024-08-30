@@ -20,5 +20,13 @@ namespace BuyPlus_E_CommerceApp.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Create(Category category)
+        {
+            _context.Categories.Add(category);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
