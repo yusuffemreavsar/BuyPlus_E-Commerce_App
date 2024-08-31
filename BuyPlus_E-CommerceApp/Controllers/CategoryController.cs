@@ -27,7 +27,8 @@ namespace BuyPlus_E_CommerceApp.Controllers
             {
                _context.Categories.Add(category);
                _context.SaveChanges();
-               return RedirectToAction("Index");
+                TempData["success"] = "Category Created Succesfully";
+                return RedirectToAction("Index");
             }
             return View();
         }
@@ -49,6 +50,7 @@ namespace BuyPlus_E_CommerceApp.Controllers
         {
             _context.Update(category);
             _context.SaveChanges();
+            TempData["success"] = "Category Updated Succesfully";
             return RedirectToAction("Index");
         
             return View();
@@ -77,6 +79,7 @@ namespace BuyPlus_E_CommerceApp.Controllers
             }
             _context.Categories.Remove(category);
             _context.SaveChanges();
+            TempData["success"] = "Category Deleted Succesfully";
 
             return RedirectToAction("Index");
         }
